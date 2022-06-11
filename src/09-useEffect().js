@@ -18,6 +18,7 @@ function App() {
   const [count, setCount] = useState(0)
   // useEffect() 参数是一个函数，useEffect()会在组件渲染好的时候执行。
   // useEffect() = (componentDidMount + componentDidUpdate)
+  //! 无论改了什么数据 useEffect() 都会执行。
   useEffect(() => {
     document.title = `Counter: ${count}`
   })
