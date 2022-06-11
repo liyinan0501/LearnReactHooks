@@ -1,18 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import Scroll from './Scroll'
 
-const App = (
-  <div style={{ height: 10000, width: 10000 }}>
-    <h1>Root Component</h1>
-    <Scroll>
-      {({ top, left }) => (
-        <div style={{ position: 'fixed' }}>
-          ({left} ------ {top})
-        </div>
-      )}
-    </Scroll>
-  </div>
-)
+function App() {
+  // useState(0)：
+  // 参数：初始值
+  // 返回值：是一个数组，长度为2。
+  // 数组下标0：就是这个状态
+  // 数组下标1：修改这个状态的函数
+  const [count, setCount] = useState(0)
+  const [money, setMoney] = useState(1000)
+  return (
+    <div>
+      <h3>Root Component</h3>
+      <div>Counter: {count}</div>
+      <button onClick={() => setCount(count + 1)}>Click +1</button>{' '}
+      <div>Money: {money}</div>
+      <button onClick={() => setMoney(money + 100)}>Money +100</button>
+    </div>
+  )
+}
 
-createRoot(document.getElementById('root')).render(App)
+// class App extends Component {
+//   state = {
+//     count: 0,
+//   }
+//   add = () => {
+//     this.setState({
+//       count: this.state.count + 1,
+//     })
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <h3>Root Component</h3>
+//         <div>Counter: {this.state.count}</div>
+//         <button onClick={this.add}>Click +1</button>
+//       </div>
+//     )
+//   }
+// }
+
+createRoot(document.getElementById('root')).render(<App />)
