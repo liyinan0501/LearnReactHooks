@@ -9,6 +9,10 @@ import { createRoot } from 'react-dom/client'
     <div ref={xxRef}></div>
 
   3. 可以通过 xxRef.current 访问到对应的DOM
+
+  //* 作用：
+  1. 只要在React中进行DOM操作，都可以通过useRef来获取DOM，比如获取DOM的宽高等。
+  2. useRef不仅仅可以用于操作DOM，还可以操作组件。
 */
 function App() {
   const inputRef = useRef(null)
