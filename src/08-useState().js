@@ -10,6 +10,11 @@ function App() {
   // 返回值：是一个数组，长度为2。
   // 数组下标0：就是这个状态
   // 数组下标1：修改这个状态的函数
+
+  //* useState()支持两种写法:
+  // 无论哪种写法，useState()只会执行一次。
+  // 1. useState(initValue)
+  // 2. useState(()=>initValue)
   const [count, setCount] = useState(0)
   const [money, setMoney] = useState(1000)
   const [user, setUser] = useState({

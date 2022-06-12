@@ -17,7 +17,7 @@ import { createRoot } from 'react-dom/client'
 function App() {
   const inputRef = useRef(null)
   const add = () => {
-    console.log(inputRef.current.add)
+    console.log(inputRef.current.value)
   }
   return (
     <div>
