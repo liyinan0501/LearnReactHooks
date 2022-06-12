@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import axios from 'axios'
+import { useEffect, useState } from 'react'
 
+// Hook Sending Request
 function App() {
   const [list, setList] = useState([])
-
   useEffect(() => {
-    const getList = async () => {
+    async function getList() {
       const res = await axios.get('http://geek.itheima.net/v1_0/channels')
       // console.log(res)
       setList(res.data.data.channels)
