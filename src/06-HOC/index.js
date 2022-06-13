@@ -12,12 +12,12 @@ import withMouse from './withMouse'
 // 命名：withXXX，withScroll， withMouse，withRouter
 
 const CatWithMouse = withMouse(Cat)
-const PositionWithMoutse = withMouse(Position)
+const PositionWithMouse = withMouse(Position)
 const App = (
   <div>
     <h1>Root Component</h1>
     <CatWithMouse></CatWithMouse>
-    <PositionWithMoutse></PositionWithMoutse>
+    <PositionWithMouse></PositionWithMouse>
   </div>
 )
 

@@ -6,7 +6,7 @@ import withMouse from './withMouse'
 import withScroll from './withScroll'
 
 // const CatWithMouse = withMouse(Cat)
-// // const PositionWithMouse = withMouse(Position)
+// const PositionWithMouse = withMouse(Position)
 const P = withScroll(withMouse(Position))
 const App = (
   <div style={{ height: 10000, width: 10000 }}>
