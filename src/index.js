@@ -45,8 +45,9 @@
 //* 5. useContext()
   作用：可以获取到Context中的数据。
   语法：
-      第一步：<Context.Provider value={value}></Context.Provider> 用Context.Provide包裹子组件。
-      第二步：在子组件获取 const value = useContext(Context)
+      第一步：在根组件 export const Context = React.reactContext()
+      第二步：在根组件 <Context.Provider value={value}></Context.Provider> 用Context.Provide包裹要渲染的子组件。
+      第三步：在子组件获取 const value = useContext(Context)
 
 //* 6. memo()
   作用：高阶组件，用于缓存一个组件，对比组件的props和state是否发生改变，如果不变，就不会更新。
