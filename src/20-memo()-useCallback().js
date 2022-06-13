@@ -11,7 +11,7 @@ import React, { useState, memo, useCallback } from 'react'
 
 //* React.memo()-useCallback()
 // useCallback 可以记住函数的引用，在组件每次更新时都指向相同引用的函数。
-//* React.memo()-useMemo
+//* React.memo()-useMemo()
 // useMemo 可以记住任何数据类型的引用，在组件每次更新时都指向相同引用的数据。
 function App() {
   const [count, setCount] = useState(5)
