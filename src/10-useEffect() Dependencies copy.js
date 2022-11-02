@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 
-// useEffect() Dependencies
+//* useEffect() Dependencies
 function App() {
   const [count, setCount] = useState(0)
   const [money, setMoney] = useState(100)
@@ -13,6 +13,7 @@ function App() {
   //! 定义依赖项：
   //* 触发时机：1.第一次渲染会执行回调函数 2. 当count发生变化时会再次执行回调函数。
   // = componentDidMount + ComponentDidUpdate(判断)
+  //* 表示依赖指定数值，任何数值发生变化都会执行useEffect里的回调函数。
   useEffect(() => {
     console.log('Executing useEffect!')
     document.title = `Counter: ${count}`
@@ -22,7 +23,7 @@ function App() {
   //! 如果依赖项是空数组[]：
   //* 触发时机：只有在组件第一次渲染时执行回调函数。
   // = ComponentDidUpdate
-  // 表示只有在组件第一次渲染后执行useEffect里的回调函数。
+  //* 表示只有在组件第一次渲染后执行useEffect里的回调函数。
   // 使用场景：1.事件绑定 2.发送请求数据等
   // useEffect(() => {
   //   document.addEventListener('click', function () {
@@ -33,7 +34,7 @@ function App() {
   //! 不写依赖项：
   //* 触发时机：1.第一次渲染会执行回调函数 2.每次组件渲染都会再次执行回调函数。
   // = componentDidMount + ComponentDidUpdate
-  // 表示依赖任何数值，任何数值发生变化都会执行useEffect里的回调函数。
+  //* 表示依赖任何数值，任何数值发生变化都会执行useEffect里的回调函数。
   // useEffect(() => {
   //   document.addEventListener('click', function () {
   //     console.log('click')
