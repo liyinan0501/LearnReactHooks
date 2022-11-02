@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
 
-// useEffect()
+// * useEffect()
 // 用来解决副作用的，操作副作用的时候需要放到 useEffect() 里面。
 // * 函数的主作用：是用来渲染UI的
 // * 函数的副作用：除了渲染UI之外的操作
@@ -18,7 +18,7 @@ function App() {
   const [count, setCount] = useState(0)
   // useEffect() 参数是一个函数，useEffect()会在组件渲染好的时候执行。
   // useEffect() = (componentDidMount + componentDidUpdate)
-  //! 无论改了什么数据 useEffect() 都会执行。
+  //! 无论改了什么数据 useEffect() 都会执行，更加简便，利于操作。
   useEffect(() => {
     document.title = `Counter: ${count}`
   })
