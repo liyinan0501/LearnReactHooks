@@ -17,6 +17,7 @@ function App() {
   // 2. useState(()=>initValue)
   const [count, setCount] = useState(0)
   const [money, setMoney] = useState(1000)
+  // 也可以传入对象
   const [user, setUser] = useState({
     name: 'Tom',
     age: 18,
@@ -25,6 +26,7 @@ function App() {
     <div>
       <h3>Root Component</h3>
       <div>Counter: {count}</div>
+      {/* 用 setCount 更改state */}
       <button onClick={() => setCount(count + 1)}>Click +1</button>
       <br />
       <div>Money: {money}</div>
@@ -33,6 +35,7 @@ function App() {
   )
 }
 
+//* 对比以前class组件的方法：
 // class App extends Component {
 //   state = {
 //     count: 0,
