@@ -1,8 +1,7 @@
-import { clear } from '@testing-library/user-event/dist/clear'
 import React, { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 
-// useEffect() Cleaning
+//* useEffect() Cleaning
 // 组件卸载时需要清除 effect 创建的诸如订阅, 计时器 ID, 给window注册事件等资源。
 function App() {
   const [count, setCount] = useState(0)
@@ -45,16 +44,15 @@ function Child({ count }) {
 }
 
 createRoot(document.getElementById('root')).render(<App />)
-/*
+/* 总结：
    1. userEffect 语法
-   userEffect(() => {})  组件第一次渲染以及每一次更新都会执行。
+   userEffect(() => {})  组件第一次渲染以及每一次更新渲染都会执行。
 
    userEffect(() => {}, []) 组件第一次渲染会执行。
 
    userEffect(() => {}, [依赖项]) 组建第一次渲染会执行，并且依赖项发生变化也会执行。
 
    2. 清理副作用的语法
-
    当组件销毁的时候，以及每次回调函数执行之前，都会清理副作用。
    userEffect(() => {
      return () => {
