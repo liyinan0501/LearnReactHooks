@@ -13,6 +13,7 @@ function App() {
         // console.log(res)
         setList(res.data.data.channels)
       }
+      // 需要调用此异步函数
       getList()
     },
     []
