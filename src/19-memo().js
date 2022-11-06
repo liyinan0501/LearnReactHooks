@@ -23,7 +23,7 @@ function App() {
   )
 }
 
-// 对于Child1来说，memo起了反作用，无论如何Child1都需要渲染，memo无形之中给Child1加上了一些东西。
+// 对于Child1来说，memo起了反作用，用不用memo无论如何Child1都需要渲染，因为memo是高阶组件，memo无形之中给Child1加上了一些东西。
 const Child1 = memo(({ count }) => {
   console.log('Child1 updated')
   return <div>Child1 Component -- {count} </div>
